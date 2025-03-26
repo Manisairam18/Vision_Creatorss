@@ -220,7 +220,7 @@ const CareersPage = () => {
                 {/* Content Box and Buttons */}
                 <div className="flex flex-col items-center justify-center w-full mt-8 sm:mt-12 md:mt-20">
                     {/* Background Box */}
-                    <div className="w-[80%] xs:w-[90%] sm:w-[85%] md:w-[80%] lg:w-[924px] h-[180px] xs:h-[220px] sm:h-[300px] md:h-[400px] lg:h-[520px] bg-[#D9D9D9]"></div>
+                    <div className="w-[90%] xs:w-[90%] sm:w-[85%] md:w-[80%] lg:w-[924px] h-[180px] xs:h-[220px] sm:h-[300px] md:h-[400px] lg:h-[520px] bg-[#D9D9D9]"></div>
 
                     {/* Buttons Container */}
                     <div className="flex flex-row items-start gap-4 sm:flex-row sm:gap-6 mt-6 sm:mt-8 md:mt-10">
