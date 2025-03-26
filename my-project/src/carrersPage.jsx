@@ -7,13 +7,12 @@ import dotsImageRed from "../assets/Dots_Red.svg";
 import plus from "../assets/plus.svg";
 import minus from "../assets/minus.svg";
 import uploadIcon from "../assets/ContactFormAssets/upload_Icon.svg";
-import closeButton from "../assets/ContactFormAssets/close.svg"; // Close button for both modal and copied message
+import closeButton from "../assets/ContactFormAssets/close.svg";
 
 const CareersPage = () => {
-
     const sliderSettings = {
         dots: false,
-        cssEase: "cubic-bezier(0.32, 0.32, 0.32, 0.32)", // Smooth acceleration and deceleration
+        cssEase: "cubic-bezier(0.32, 0.32, 0.32, 0.32)",
         infinite: true,
         speed: 4500,
         slidesToScroll: 1,
@@ -21,27 +20,27 @@ const CareersPage = () => {
         autoplaySpeed: 0,
         responsive: [
             {
-                breakpoint: 9999, // Above xl (1280px and above)
+                breakpoint: 9999,
                 settings: {
-                    slidesToShow: 3, // Show 3 slides in large desktop (1280px+)
+                    slidesToShow: 3,
                 },
             },
             {
-                breakpoint: 1280, // xl (1280px and below)
+                breakpoint: 1280,
                 settings: {
-                    slidesToShow: 2, // Show 2 slides in desktop (1024px to 1279px)
+                    slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 1024, // lg (1024px and below)
+                breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2, // Show 2 slides in tablet/desktop (768px to 1023px)
+                    slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 768, // md (768px and below)
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 1, // Show 1 slide in tablet (640px to 767px)
+                    slidesToShow: 1,
                 },
             },
             {
@@ -52,6 +51,7 @@ const CareersPage = () => {
             },
         ],
     };
+
     const sliderItems = [
         {
             id: 1,
@@ -70,12 +70,7 @@ const CareersPage = () => {
         },
     ];
 
-    // Duplicate items for infinite loop effect
     const duplicatedItems = [...sliderItems, ...sliderItems, ...sliderItems];
-
-
-
-
 
     const [formData, setFormData] = useState({
         name: "",
@@ -90,7 +85,7 @@ const CareersPage = () => {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [openIndex, setOpenIndex] = useState(null);
-    const [copiedIndex, setCopiedIndex] = useState(null); // State to track which role's link was copied
+    const [copiedIndex, setCopiedIndex] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -164,29 +159,34 @@ const CareersPage = () => {
     };
 
     const handleShare = (role, index) => {
-        // Construct the role-specific URL (you can customize this based on your routing)
         const roleLink = `${window.location.origin}/careers/${role.toLowerCase().replace(/\s+/g, "-")}`;
         navigator.clipboard.writeText(roleLink).then(() => {
-            setCopiedIndex(index); // Show the "copied" message for this role
+            setCopiedIndex(index);
         });
     };
 
     const handleCloseCopiedMessage = () => {
-        setCopiedIndex(null); // Hide the "copied" message
+        setCopiedIndex(null);
+    };
+
+    const scrollToJobForm = (role) => {
+        setFormData(prev => ({ ...prev, applyingFor: role }));
+        const jobForm = document.getElementById('jobForm');
+        if (jobForm) {
+            jobForm.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
         <div className="bg-white w-full lg: mt-8 sm:mt-12 md:mt-16">
             <div className="w-full mx-auto">
                 <div className="flex flex-col w-full gap-[10px] shrink-0">
-                    {/* Heading Section */}
                     <div className="flex flex-col items-center text-center w-full">
                         <h1 className="text-[20px] xs:text-[22px] sm:text-[26px] md:text-[30px] lg:text-[36px] xl:text-[48px] font-poppins font-medium leading-[125%] text-[#252627] mb-4 sm:mb-6 whitespace-nowrap">
                             Let's create fun brands together.
                         </h1>
                     </div>
 
-                    {/* First Slider Section */}
                     <div className="w-full mt-4 sm:mt-8 overflow-hidden relative">
                         <Slider {...{
                             ...sliderSettings,
@@ -198,8 +198,8 @@ const CareersPage = () => {
                             {duplicatedItems.map((item, index) => (
                                 <div
                                     key={`${item.id}-${index}`}
-                                    className="px-2 sm:px-4" // Minimal padding
-                                    style={{ width: 'auto' }} // Let content determine width
+                                    className="px-2 sm:px-4"
+                                    style={{ width: 'auto' }}
                                 >
                                     <div className="flex items-center space-x-2 xs:space-x-3 sm:space-x-4">
                                         <img
@@ -217,12 +217,9 @@ const CareersPage = () => {
                     </div>
                 </div>
 
-                {/* Content Box and Buttons */}
                 <div className="flex flex-col items-center justify-center w-full mt-8 sm:mt-12 md:mt-20">
-                    {/* Background Box */}
                     <div className="w-[90%] xs:w-[90%] sm:w-[85%] md:w-[80%] lg:w-[924px] h-[180px] xs:h-[220px] sm:h-[300px] md:h-[400px] lg:h-[520px] bg-[#D9D9D9]"></div>
 
-                    {/* Buttons Container */}
                     <div className="flex flex-row items-start gap-4 sm:flex-row sm:gap-6 mt-6 sm:mt-8 md:mt-10">
                         <div>
                             <button className="border-2 border-[#E92429] text-[#E92429] font-poppins text-[14px] xs:text-[15px] sm:text-[16px] md:text-[18px] lg:text-[22px] py-1 xs:py-1.5 sm:py-2 px-3 xs:px-4 sm:px-5 md:px-6 transition-colors whitespace-nowrap">
@@ -230,7 +227,6 @@ const CareersPage = () => {
                             </button>
                         </div>
 
-                        {/* Learn More Section */}
                         <div className="flex flex-col items-center text-center sm:items-start sm:text-left sm:ml-0 sm:mt-[-10px] md:ml-16 md:mt-[5px] mt-0 [text-align:left] [align-items:flex-start] sm:[text-align:left] sm:[align-items:start]">
                             <div>
                                 <a
@@ -252,15 +248,14 @@ const CareersPage = () => {
                     </div>
                 </div>
 
-                {/* Second Slider Section */}
-                <div className="w-full mt-4 sm:mt-8 overflow-hidden relative">
+                <div className="w-full mt-8 sm:mt-8 overflow-hidden relative">
                     <Slider {...{
                         ...sliderSettings,
                         centerMode: true,
                         centerPadding: '0',
                         variableWidth: true,
                         initialSlide: 1,
-                        rtl: true // Reverse direction for second slider
+                        rtl: true
                     }}>
                         {duplicatedItems.map((item, index) => (
                             <div
@@ -284,22 +279,17 @@ const CareersPage = () => {
                 </div>
             </div>
 
-
-            {/* Roles Section */}
             <div className="w-full max-w-3xl mx-auto xs:py-8 sm:mt-12 mr-0 sm:mr-14 px-4 sm:px-5 md:px-6 lg:px-8 mt-12">
                 <h2 className="flex justify-start translate-x-4 xs:translate-x-3 sm:translate-x-3 translate-y-0 sm:translate-y-0 md:translate-x-3 lg:-translate-x-[60%] lg:translate-y-16 xl:-translate-x-[60%] xl:translate-y-16 2xl:-translate-x-[60%] 2xl:translate-y-16 text-[24px] xs:text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-black leading-[125%] mb-3 xs:mb-4">
                     Roles
                 </h2>
 
-
-                {/* Roles List Section */}
                 <div className="px-0 sm:px-5 md:px-6 lg:px-2">
                     {roles.map((role, index) => (
                         <div
                             key={index}
                             className="border-t border-b border-gray-400 text-[16px] xs:text-[18px] sm:text-[22px] md:text-[24px] font-medium font-poppins text-[#252627] leading-[120%]"
                         >
-                            {/* Individual Role Container */}
                             <div
                                 className="flex justify-between items-center py-2 xs:py-3 px-3 xs:px-4 cursor-pointer"
                                 onClick={() => toggleRole(index)}
@@ -316,9 +306,11 @@ const CareersPage = () => {
                             {openIndex === index && (
                                 <div className="p-2 xs:p-3 sm:p-4 text-[#252627] text-[14px] xs:text-[16px] sm:text-[18px] leading-[150%]">
                                     {roleDetails[role]}
-                                    {/* Apply and Share Buttons */}
                                     <div className="flex items-center mt-3 xs:mt-4 relative">
-                                        <button className="border-2 border-[#252627] text-[#252627] text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] font-normal py-1 xs:py-1.5 px-2 xs:px-3 mr-2 xs:mr-3">
+                                        <button 
+                                            className="border-2 border-[#252627] text-[#252627] text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] font-normal py-1 xs:py-1.5 px-2 xs:px-3 mr-2 xs:mr-3"
+                                            onClick={() => scrollToJobForm(role)}
+                                        >
                                             Apply
                                         </button>
                                         <button
@@ -327,7 +319,6 @@ const CareersPage = () => {
                                         >
                                             Share
                                         </button>
-                                        {/* Copied Message */}
                                         {copiedIndex === index && (
                                             <div className="fixed inset-0 flex items-center justify-center z-50">
                                                 <div
@@ -360,17 +351,11 @@ const CareersPage = () => {
                 </div>
             </div>
 
-
-
-
-
-            {/* Job Form */}
-            <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-5 md:px-6 lg:px-2 py-1 xs:py-1 sm:py-2 mt-4 xs:mt-6">
+            <div id="jobForm" className="w-full max-w-[1400px] mx-auto px-4 sm:px-5 md:px-6 lg:px-2 py-1 xs:py-1 sm:py-2 mt-4 xs:mt-6">
                 <div className="text-[20px] xs:text-[28px] sm:text-[36px] font-semibold text-black leading-[45px] mb-4 xs:mb-5 sm:mb-6 font-poppins text-left sm:text-left">
                     <h2>Job Form</h2>
                 </div>
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4 xs:gap-6 sm:gap-[40px]">
-                    {/* First Div - Required Fields */}
                     <div className="space-y-3 xs:space-y-4 sm:space-y-6">
                         {[
                             { label: "Name*", name: "name", type: "text", required: true },
@@ -397,7 +382,6 @@ const CareersPage = () => {
                         ))}
                     </div>
 
-                    {/* Second Div - Other Fields */}
                     <div className="space-y-3 xs:space-y-4 sm:space-y-6">
                         {[
                             { label: "Social media link:", name: "socialMedia", type: "text", required: false },
@@ -421,7 +405,6 @@ const CareersPage = () => {
                             </div>
                         ))}
 
-                        {/* File Upload Field */}
                         <div className="relative flex flex-col">
                             <div className="relative">
                                 <input
@@ -454,7 +437,6 @@ const CareersPage = () => {
                             </div>
                         </div>
 
-                        {/* Textarea Field */}
                         <div className="flex flex-col relative">
                             <textarea
                                 name="additionalInfo"
@@ -471,7 +453,6 @@ const CareersPage = () => {
                             </label>
                         </div>
 
-                        {/* Submit Button */}
                         <div className="flex justify-center sm:justify-start mt-3 xs:mt-4 sm:mt-6 p-2 xs:p-4 sm:p-6">
                             <button
                                 type="submit"
@@ -484,8 +465,6 @@ const CareersPage = () => {
                 </form>
             </div>
 
-
-            {/* Thank You Modal */}
             {isSubmitted && (
                 <div className="fixed inset-0 flex items-center justify-center z-50">
                     <div
