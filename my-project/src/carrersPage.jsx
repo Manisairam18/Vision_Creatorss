@@ -286,13 +286,14 @@ const CareersPage = () => {
 
 
             {/* Roles Section */}
-            <div className="w-full max-w-3xl mx-auto py-6 xs:py-8 sm:py-10 mt-12 mr-0 sm:mr-14">
-                <h2 className="flex justify-start -translate-x-0 sm:-translate-x-[65%] translate-y-0 sm:translate-y-8 text-[24px] xs:text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-black leading-[125%] mb-3 xs:mb-4">
+            <div className="w-full max-w-3xl mx-auto xs:py-8 sm:mt-12 mr-0 sm:mr-14 px-4 sm:px-5 md:px-6 lg:px-8 mt-12">
+                <h2 className="flex justify-start translate-x-4 xs:translate-x-3 sm:translate-x-3 translate-y-0 sm:translate-y-0 md:translate-x-3 lg:-translate-x-[60%] lg:translate-y-16 xl:-translate-x-[60%] xl:translate-y-16 2xl:-translate-x-[60%] 2xl:translate-y-16 text-[24px] xs:text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-black leading-[125%] mb-3 xs:mb-4">
                     Roles
                 </h2>
 
+
                 {/* Roles List Section */}
-                <div className="border-t border-gray-400 ml-0 sm:ml-0">
+                <div className="px-0 sm:px-5 md:px-6 lg:px-2">
                     {roles.map((role, index) => (
                         <div
                             key={index}
@@ -309,33 +310,30 @@ const CareersPage = () => {
                                 <img
                                     src={openIndex === index ? minus : plus}
                                     alt="toggle"
-                                    className="w-5 xs:w-6 h-5 xs:h-6"
+                                    className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 transition-all duration-200 ease-in-out"
                                 />
                             </div>
                             {openIndex === index && (
-                                <div className="p-3 xs:p-4 text-[#252627] text-[14px] xs:text-[16px] sm:text-[18px] leading-[150%]">
+                                <div className="p-2 xs:p-3 sm:p-4 text-[#252627] text-[14px] xs:text-[16px] sm:text-[18px] leading-[150%]">
                                     {roleDetails[role]}
                                     {/* Apply and Share Buttons */}
-                                    <div className="flex items-center mt-4 relative">
-                                        <button className="border-2 border-[#252627] text-[#252627] text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] font-normal py-2 px-4 mr-4">
+                                    <div className="flex items-center mt-3 xs:mt-4 relative">
+                                        <button className="border-2 border-[#252627] text-[#252627] text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] font-normal py-1 xs:py-1.5 px-2 xs:px-3 mr-2 xs:mr-3">
                                             Apply
                                         </button>
-
                                         <button
                                             onClick={() => handleShare(role, index)}
-                                            className="text-[#252627] text-[26px] xs:text-[18px] sm:text-[26px] font-medium underline underline-offset-[4px] 
-                                            font-[Poppins] pl-2 w-[20px] h-[30px]"
+                                            className="text-[#252627] text-[18px] xs:text-[16px] sm:text-[22px] font-medium underline underline-offset-[4px] font-[Poppins] pl-2 w-[16px] xs:w-[18px] h-[24px] xs:h-[26px]"
                                         >
                                             Share
                                         </button>
-
                                         {/* Copied Message */}
                                         {copiedIndex === index && (
                                             <div className="fixed inset-0 flex items-center justify-center z-50">
                                                 <div
                                                     className="relative w-[90%] max-w-[400px] text-white p-10 rounded-lg shadow-lg"
                                                     style={{
-                                                        background: "linear-gradient(180deg, #E92429 0%, #00C4B4 100%)", // Changed to vertical gradient to match Thank You modal
+                                                        background: "linear-gradient(180deg, #E92429 0%, #00C4B4 100%)",
                                                         backgroundSize: "cover",
                                                         backgroundPosition: "center",
                                                     }}
@@ -362,8 +360,12 @@ const CareersPage = () => {
                 </div>
             </div>
 
+
+
+
+
             {/* Job Form */}
-            <div className="w-full max-w-[1400px] mx-auto px-2 py-1 xs:py-1 sm:py-2 mt-4 xs:mt-6">
+            <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-5 md:px-6 lg:px-2 py-1 xs:py-1 sm:py-2 mt-4 xs:mt-6">
                 <div className="text-[20px] xs:text-[28px] sm:text-[36px] font-semibold text-black leading-[45px] mb-4 xs:mb-5 sm:mb-6 font-poppins text-left sm:text-left">
                     <h2>Job Form</h2>
                 </div>
@@ -481,6 +483,7 @@ const CareersPage = () => {
                     </div>
                 </form>
             </div>
+
 
             {/* Thank You Modal */}
             {isSubmitted && (
