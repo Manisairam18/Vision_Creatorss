@@ -167,7 +167,7 @@ const CorporateGifts = () => {
           <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
             {/* Left Side - Heading */}
             <div className="md:w-1/3 w-full text-center md:text-left relative">
-              <h1 className="text-[5vw] sm:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-30px] sm:translate-x-0 translate-y-[16px] sm:translate-y-0">
+              <h1 className="text-[5vw] sm:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-60px] sm:translate-x-0 translate-y-[20px] sm:translate-y-0">
                 <span className="sm:hidden">Executive Level Gifts</span>
                 <span className="hidden sm:block">
                   Executive Level <br /> Gifts
@@ -175,51 +175,54 @@ const CorporateGifts = () => {
               </h1>
             </div>
 
+
+
             {/* Right Side - Carousel */}
             <div className="md:w-2/3 w-full flex justify-center md:justify-end relative">
               <div className="w-full max-w-[840px] relative">
                 <Slider ref={sliderRef1} {...settings}>
                   {/* Slide 1 */}
                   <div className="flex flex-col items-end px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0 translate-x-[4vw] sm:translate-x-0">
                       <img
                         src={ProductImage1}
                         alt="Product 1"
                         className="w-[30vw] sm:w-[100px] lg:w-[200px] xl:w-[230px] h-[40vw] sm:h-[140px] lg:h-[170px] xl:h-[190px] object-contain"
                       />
                     </div>
-                    <p className="text-[#252627] text-[3.5vw] sm:text-[14px] lg:text-[16px] font-inter font-normal mt-1 text-left sm:text-center w-[40vw] sm:w-auto ml-6 sm:mr-0">
+                    <p className="text-[#252627] text-[3.5vw] sm:text-[14px] lg:text-[16px] font-inter font-normal mt-1 text-left sm:text-center w-[40vw] sm:w-auto ml-8 sm:mr-0">
                       Product image 1
                     </p>
                   </div>
 
                   {/* Slide 2 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[4vw] sm:translate-x-0">
                       <img
                         src={ProductImage2}
                         alt="Product 2"
                         className="w-[30vw] sm:w-[150px] lg:w-[200px] xl:w-[230px] h-[40vw] sm:h-[140px] lg:h-[170px] xl:h-[190px] object-contain"
                       />
                     </div>
-                    <p className="text-[#252627] text-[3.5vw] sm:text-[14px] lg:text-[16px] font-inter font-normal mt-1 text-center">
+                    <p className="text-[#252627] text-[3.5vw] sm:text-[14px] lg:text-[16px] font-inter font-normal mt-1 text-center sm:w-auto ">
                       Product image 2
                     </p>
                   </div>
 
                   {/* Slide 3 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[4vw] sm:translate-x-0">
                       <img
                         src={ProductImage3}
                         alt="Product 3"
                         className="w-[30vw] sm:w-[150px] lg:w-[200px] xl:w-[230px] h-[40vw] sm:h-[140px] lg:h-[170px] xl:h-[190px] object-contain"
                       />
                     </div>
-                    <p className="text-[#252627] text-[3.5vw] sm:text-[14px] lg:text-[16px] font-inter font-normal mt-1 text-center">
+                    <p className="text-[#252627] text-[3.5vw] sm:text-[14px] lg:text-[16px] font-inter font-normal mt-1 text-center sm:w-auto ">
                       Product image 3
                     </p>
                   </div>
+
                 </Slider>
 
                 {/* Custom Navigation Buttons */}
@@ -247,7 +250,7 @@ const CorporateGifts = () => {
           <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
             {/* Right Side - Heading */}
             <div className="md:w-1/3 w-full text-center md:text-left relative order-1 md:order-2 md:ml-[10%] whitespace-nowrap">
-              <h1 className="text-[5vw] sm:text-[28px] lg:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-30px] sm:translate-x-0 translate-y-[16px] sm:translate-y-0">
+              <h1 className="text-[5vw] sm:text-[28px] lg:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-60px] sm:translate-x-0 translate-y-[20px] sm:translate-y-0">
                 <span className="sm:hidden whitespace-nowrap">Managerial Level Gifts</span>
                 <span className="hidden sm:block md:hidden">
                   Managerial Level <br /> Gifts
@@ -259,8 +262,8 @@ const CorporateGifts = () => {
                   Managerial Level <br /> Gifts
                 </span>
               </h1>
-
             </div>
+
 
             {/* Left Side - Carousel */}
             <div className="md:w-2/3 w-full flex justify-center md:justify-start relative order-2 md:order-1">
@@ -268,7 +271,7 @@ const CorporateGifts = () => {
                 <Slider ref={sliderRef2} {...settings}>
                   {/* Slide 1 */}
                   <div className="flex flex-col items-end px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0 translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage1}
                         alt="Product 1"
@@ -282,7 +285,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 2 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage2}
                         alt="Product 2"
@@ -296,7 +299,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 3 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage3}
                         alt="Product 3"
@@ -307,6 +310,7 @@ const CorporateGifts = () => {
                       Product image 3
                     </p>
                   </div>
+
                 </Slider>
 
                 {/* Custom Navigation Buttons */}
@@ -335,12 +339,16 @@ const CorporateGifts = () => {
             {/* Left Side - Heading */}
             <div className="md:w-1/3 w-full text-center md:text-left relative">
               <h1 className="text-[5vw] sm:text-[28px] lg:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-30px] sm:translate-x-0 translate-y-[16px] sm:translate-y-0 ml-3 sm:ml-0">
-                <span className="sm:hidden">Premium grade employee and customer gifts</span>
+                <span className="sm:hidden">
+                  Premium grade employee and <br />
+                  <span className="inline-block ml-[-115px]">customer gifts</span>
+                </span>
                 <span className="hidden sm:block">
                   Premium grade <br /> employee and customer gift
                 </span>
               </h1>
             </div>
+
 
             {/* Right Side - Carousel */}
             <div className="md:w-2/3 w-full flex justify-center md:justify-end relative">
@@ -348,7 +356,7 @@ const CorporateGifts = () => {
                 <Slider ref={sliderRef3} {...settings}>
                   {/* Slide 1 */}
                   <div className="flex flex-col items-end px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0 translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage1}
                         alt="Product 1"
@@ -362,7 +370,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 2 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage2}
                         alt="Product 2"
@@ -376,7 +384,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 3 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage3}
                         alt="Product 3"
@@ -387,6 +395,7 @@ const CorporateGifts = () => {
                       Product image 3
                     </p>
                   </div>
+
                 </Slider>
 
                 {/* Custom Navigation Buttons */}
@@ -414,10 +423,13 @@ const CorporateGifts = () => {
           <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
             {/* Right Side - Heading */}
             <div className="md:w-1/3 w-full text-center md:text-left relative order-1 md:order-2 md:ml-[10%] whitespace-nowrap">
-              <h1 className="text-[5vw] sm:text-[28px] lg:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-30px] sm:translate-x-0 translate-y-[16px] sm:translate-y-0 ml-2 sm:ml-0">
-                <span className="sm:hidden">Standard grade employee <br /> and customer gifts</span>
+              <h1 className="text-[5vw] sm:text-[28px] lg:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-30px] sm:translate-x-0 translate-y-[16px] sm:translate-y-0 ml-3 sm:ml-0">
+                <span className="sm:hidden">
+                  Standard grade employee and <br />
+                  <span className="inline-block ml-[-115px]">customer gifts</span>
+                </span>
                 <span className="hidden sm:block md:hidden">
-                  Standard grade <br /> employee and <br /> customer gift
+                  Standard grade <br /> employee and customer gift
                 </span>
                 <span className="hidden md:block lg:hidden">
                   Standard <br /> grade <br /> employee <br /> and <br /> customer <br /> gifts
@@ -426,8 +438,9 @@ const CorporateGifts = () => {
                   Standard grade <br /> employee and <br /> customer gift
                 </span>
               </h1>
-
             </div>
+
+
 
             {/* Left Side */}
             <div className="md:w-2/3 w-full flex justify-center md:justify-start relative order-2 md:order-1">
@@ -435,7 +448,7 @@ const CorporateGifts = () => {
                 <Slider ref={sliderRef4} {...settings}>
                   {/* Slide 1 */}
                   <div className="flex flex-col items-end px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0 translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage1}
                         alt="Product 1"
@@ -449,7 +462,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 2 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage2}
                         alt="Product 2"
@@ -463,7 +476,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 3 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage3}
                         alt="Product 3"
@@ -474,6 +487,7 @@ const CorporateGifts = () => {
                       Product image 3
                     </p>
                   </div>
+
                 </Slider>
 
                 {/* Custom Navigation Buttons */}
@@ -501,21 +515,25 @@ const CorporateGifts = () => {
           <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
             {/* Left Side - Heading */}
             <div className="md:w-1/3 w-full text-center md:text-left relative">
-              <h1 className="text-[5vw] sm:text-[28px] lg:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-30px] sm:translate-x-0 translate-y-[16px] sm:translate-y-0 ml-2 sm:ml-0">
-                <span className="sm:hidden">Basic grade employee and customer gifts</span>
+              <h1 className="text-[5vw] sm:text-[28px] lg:text-[36px] font-poppins font-semibold leading-[125%] text-[#252627] mb-4 sm:mb-0 translate-x-[-30px] sm:translate-x-0 translate-y-[16px] sm:translate-y-0 ml-3 sm:ml-0">
+                <span className="sm:hidden">
+                  Basic grade employee and <br />
+                  <span className="inline-block ml-[-95px]">customer gifts</span>
+                </span>
                 <span className="hidden sm:block">
                   Basic grade employee and customer gift
                 </span>
               </h1>
             </div>
 
+
             {/* Right Side - Carousel */}
             <div className="md:w-2/3 w-full flex justify-center md:justify-end relative">
-              <div className="w-full max-w-[840px] relative">
+              <div className="w-full max-w-[840px] relative ">
                 <Slider ref={sliderRef5} {...settings}>
                   {/* Slide 1 */}
                   <div className="flex flex-col items-end px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto mr-2 sm:mr-0 translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage1}
                         alt="Product 1"
@@ -529,7 +547,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 2 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage2}
                         alt="Product 2"
@@ -543,7 +561,7 @@ const CorporateGifts = () => {
 
                   {/* Slide 3 */}
                   <div className="flex flex-col items-center px-1 sm:items-center sm:px-4">
-                    <div className="bg-white flex items-center justify-center p-3 w-[40vw] sm:w-[180px] lg:p-8 lg:w-auto">
+                    <div className="bg-white flex items-center justify-center p-3 w-[35vw] sm:w-[180px] lg:p-8 lg:w-auto translate-x-[3vw] sm:translate-x-0">
                       <img
                         src={ProductImage3}
                         alt="Product 3"
@@ -554,6 +572,7 @@ const CorporateGifts = () => {
                       Product image 3
                     </p>
                   </div>
+
                 </Slider>
 
                 {/* Custom Navigation Buttons */}
@@ -570,6 +589,7 @@ const CorporateGifts = () => {
                   <img src={RightArrow} alt="Next" className="w-[2.5vw] sm:w-[10px] lg:w-[12px] xl:w-[13px] h-[6vw] sm:h-[25px] lg:h-[28px] xl:h-[30px]" />
                 </button>
               </div>
+
             </div>
           </div>
         </div>
